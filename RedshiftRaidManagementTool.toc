@@ -9,5 +9,6 @@ FauxScrollFrameWithButtonsTemplate.xml
 RRMTFrameTemplate.xml
 RRMTScrollFrameTemplate.xml
 RadioButtonGridTemplate.xml
+DropdownMenuGridTemplate.xml
 config.lua
 init.lua
