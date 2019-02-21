@@ -1,0 +1,13 @@
+## Interface: 80000
+## Title: |cff8a181a<Redshift> RMT|r
+## Author: Adrian Davis
+## DefaultState: enabled
+## Version: 0.1
+## SavedVariables: RedshiftRoster, GuildMemberLookup
+
+FauxScrollFrameWithButtonsTemplate.xml
+RRMTFrameTemplate.xml
+RRMTScrollFrameTemplate.xml
+RadioButtonGridTemplate.xml
+config.lua
+init.lua

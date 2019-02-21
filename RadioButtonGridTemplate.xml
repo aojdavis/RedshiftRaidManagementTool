@@ -1,0 +1,68 @@
+<Ui>
+  <Script file="config.lua"/>
+  <CheckButton name = "CheckButtonTemplate" inherits = "UIRadioButtonTemplate" virtual="true" checked ="false">
+    <Size>
+      <AbsDimension x="16" y="16" />
+    </Size>
+    <Scripts>
+    </Scripts>
+    <NormalFont style="GameFontHighlightLeft"/>
+  </CheckButton>
+
+  <Button name = "MemberButtonTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="105" y="16" />
+    </Size>
+    <Scripts>
+      <OnClick>
+        print(self:GetText(), "clicked")
+      </OnClick>
+    </Scripts>
+    <NormalFont style="GameFontHighlightLeft"/>
+  </Button>
+
+  <Frame name="ButtonGridTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="165" y="16" />
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER">
+        <Offset>
+          <AbsDimension x="0" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Frames>
+      <CheckButton name = "$parentCheckButton" parentKey = "checkButton" inherits = "CheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+            <Offset>
+              <AbsDimension x="8" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Size>
+          <AbsDimension x="16" y="16" />
+        </Size>
+      </CheckButton>
+      <Button name = "$parentMemberButton" parentKey = "memberButton" inherits = "MemberButtonTemplate">
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="$parentCheckButton" relativePoint="RIGHT" />
+        </Anchors>
+      </Button>      
+    </Frames>
+    <Layers>
+      <Layer level = "ARTWORK">
+        <FontString name="$parentAttendanceValueText" parentKey = "attendanceValueText" inherits="GameFontNormal">
+          <Anchors>
+            <Anchor point="LEFT" relativeTo="$parentMemberButton" relativePoint="RIGHT">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+</Ui>
