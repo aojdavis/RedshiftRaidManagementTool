@@ -1,0 +1,54 @@
+<Ui>
+
+  <Button name = "MemberButtonTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="105" y="16" />
+    </Size>
+    <Scripts>
+      <OnClick>
+        print(self:GetText(), "clicked")
+      </OnClick>
+    </Scripts>
+    <NormalFont style="GameFontHighlightLeft"/>
+  </Button>
+
+  <Frame name="DropdownGridTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="165" y="16" />
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER">
+        <Offset>
+          <AbsDimension x="0" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Frames>
+      <CheckButton name = "$parentCheckButton" parentKey = "checkButton" inherits = "CheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+            <Offset>
+              <AbsDimension x="8" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Size>
+          <AbsDimension x="16" y="16" />
+        </Size>
+      </CheckButton>     
+    </Frames>
+    <Layers>
+      <Layer level = "ARTWORK">
+        <FontString name="$parentAttendanceDateText" parentKey = "attendanceDateText" inherits="GameFontNormal">
+          <Anchors>
+            <Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+</Ui>
